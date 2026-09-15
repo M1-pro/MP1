@@ -1,3 +1,14 @@
+
+import os
+
+# تنظيف تلقائي للملفات المؤقتة بعد الإرسال
+def cleanup_file(file_path):
+    try:
+        if file_path and os.path.exists(file_path):
+            os.remove(file_path)
+    except Exception as e:
+        print(f"Error deleting temp file: {e}")
+
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import threading
 
