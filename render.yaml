@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: eemq-telegram-bot
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+
+      - key: ADMIN_IDS
+        sync: false
+
+      - key: RENDER_EXTERNAL_URL
+        sync: false
+
+      - key: WEBHOOK_SECRET
+        generateValue: true
+
+      - key: MAX_FILE_SIZE_MB
+        value: "150"
+
+      - key: MAX_CONCURRENT_DOWNLOADS
+        value: "2"
+
+      - key: MAX_QUEUE_SIZE
+        value: "30"
+
+      - key: MAX_IMAGES_PER_REQUEST
+        value: "10"
+
+      - key: DOWNLOAD_TIMEOUT
+        value: "600"
