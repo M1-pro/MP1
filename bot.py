@@ -2,7 +2,6 @@
 # Telegram Media Downloader Bot
 # TikTok / Instagram / Facebook / YouTube / yt-dlp
 #
-# Developer: مهدي الربيعي
 # ============================================================
 
 import asyncio
